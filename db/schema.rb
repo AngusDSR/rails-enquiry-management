@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_170709) do
     t.string "instagram_handle"
     t.string "preferred_contact_method"
     t.text "description"
-    t.string "placing"
+    t.string "placement"
     t.text "notes"
     t.integer "number_of_sessions", default: 1
     t.datetime "appointment"

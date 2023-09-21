@@ -14,7 +14,7 @@ class CreateEnquiries < ActiveRecord::Migration[7.0]
 
       # Tattoo details
       t.text :description
-      t.string :placing
+      t.string :placement
       t.text :notes
 
       # Appointment details
