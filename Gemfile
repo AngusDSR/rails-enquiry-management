@@ -43,7 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'faker'
-
+gem 'bootstrap', '~> 5.0'
 gem 'simple_form'
 
 # Use Sass to process CSS
