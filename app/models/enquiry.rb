@@ -8,7 +8,7 @@ class Enquiry < ApplicationRecord
   validates :read_status, inclusion: { in: %w[unread read] }, presence: true
   validates :first_name, :title, :email, :phone_number, presence: true
   validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'is not a valid email address' }
-  validates :phone_number, presence: true, format: { with: /\A\d{10}\z/, message: 'should be 10 digits' }
+  validates :phone_number, presence: true, format: { with: /\A\+?\d+\z/, message: 'Enter a valid phone number' }
   validates :instagram_handle, allow_blank: true, format: { with: /\A@\w+\z/, message: 'should start with @ and contain only letters, numbers, or underscores' }
   validates :preferred_contact_method, inclusion: { in: %w[email text whatsapp instagram] }, presence: true
   validates :description, presence: true, length: { minimum: 10, maximum: 1000 }
