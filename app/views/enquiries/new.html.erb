@@ -1,1 +1,7 @@
 <h1>Enter your details to book an appointment</h1>
+
+<%= simple_form_for @enquiry do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :surname %>
+  <%= f.input :email %>
+<% end %>
