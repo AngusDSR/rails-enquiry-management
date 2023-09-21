@@ -24,11 +24,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_170709) do
     t.string "phone_number"
     t.string "instagram_handle"
     t.string "preferred_contact_method"
+    t.boolean "over_18_confirmation", default: false
     t.text "description"
     t.string "placement"
     t.text "notes"
     t.integer "number_of_sessions", default: 1
-    t.datetime "appointment"
+    t.datetime "consultation_appointment"
+    t.datetime "booking"
     t.datetime "follow_up_session_one"
     t.datetime "follow_up_session_two"
     t.datetime "follow_up_session_three"

@@ -11,6 +11,7 @@ class CreateEnquiries < ActiveRecord::Migration[7.0]
       t.string :phone_number
       t.string :instagram_handle
       t.string :preferred_contact_method
+      t.boolean :over_18_confirmation, default: false
 
       # Tattoo details
       t.text :description
@@ -19,7 +20,8 @@ class CreateEnquiries < ActiveRecord::Migration[7.0]
 
       # Appointment details
       t.integer :number_of_sessions, default: 1
-      t.datetime :appointment
+      t.datetime :consultation_appointment, default: nil
+      t.datetime :booking, default: nil
       t.datetime :follow_up_session_one, default: nil
       t.datetime :follow_up_session_two, default: nil
       t.datetime :follow_up_session_three, default: nil

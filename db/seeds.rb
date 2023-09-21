@@ -16,7 +16,7 @@ Enquiry.destroy_all
   )
 
   puts "#{current_record.title} created!"
-  puts "------------------"
+  puts "---------------------------------"
 
 end
 
