@@ -4,7 +4,7 @@
     <h4>Section 1</h4>
     <%= f.input :first_name, placeholder: 'First name*', label: false %>
     <%= f.input :surname, placeholder: 'Second name', label: false %>
-    <%= f.input :email, placeholder: 'email@domain.com*', label: false %>
+    <%= f.input :email, placeholder: '&#xF002; email@domain.com*', label: false %>
     <%= f.input :phone_number, placeholder: 'Phone number*', label: false, hint: 'Use a prefix if non-UK number (+34/+63)' %>
     <%= f.input :instagram_handle, placeholder: '@your_instagram_handle', label: false %>
     <hr>
@@ -20,11 +20,3 @@
     <%= f.button :submit, "Send to artist" %>
   <% end %>
 </div>
-
-<%# f.input :username, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
-<%# f.input :password, hint: 'No special characters.' %>
-<%# f.input :email, placeholder: 'user@domain.com' %>
-<%# f.input :remember_me, inline_label: 'Yes, remember me' %>
-<%# f.input :username, label_html: { class: 'my_class' }, hint_html: { class: 'hint_class' } %>
-<%# f.input :password, hint: false, error_html: { id: 'password_error' } %>
-<%# f.input :password_confirmation, label: false %>
