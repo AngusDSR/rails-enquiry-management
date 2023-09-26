@@ -1,1 +1,22 @@
-hi
+<div class="container">
+  <h1>Enter your details to book an appointment</h1>
+  <%= simple_form_for @enquiry do |f| %>
+    <h4>Section 1</h4>
+    <%= f.input :first_name, placeholder: 'First name*', label: false %>
+    <%= f.input :surname, placeholder: 'Second name', label: false %>
+    <%= f.input :email, placeholder: '&#xF002; email@domain.com*', label: false %>
+    <%= f.input :phone_number, placeholder: 'Phone number*', label: false, hint: 'Use a prefix if non-UK number (+34/+63)' %>
+    <%= f.input :instagram_handle, placeholder: '@your_instagram_handle', label: false %>
+    <hr>
+    <h4>Section 2</h4>
+    <%= f.input :description, placeholder: 'Describe your idea*', label: false, hint: 'Add plenty of detail' %>
+    <%= f.input :placement, placeholder: 'Body placement*', label: false, hint: 'Be specific' %>
+    <%= f.input :notes, placeholder: 'Anything else to add?', label: false, hint: 'Allergies, reactions, adjustments you need for your appointment.' %>
+    <hr>
+    <h4>Section 3</h4>
+    <%= f.input :over_18_confirmation %>
+    <%= f.input :preferred_contact_method, as: :radio_buttons, collection: %w[email text whatsapp instagram], item_wrapper_class: 'radio' %>
+    <hr>
+    <%= f.button :submit, "Send to artist" %>
+  <% end %>
+</div>
